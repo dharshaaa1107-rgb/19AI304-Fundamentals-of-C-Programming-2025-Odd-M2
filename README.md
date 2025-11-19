@@ -56,7 +56,46 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    float math, science, english, average;
+
+    printf("Enter Math marks: ");
+    scanf("%f", &math);
+
+    printf("Enter Science marks: ");
+    scanf("%f", &science);
+
+    printf("Enter English marks: ");
+    scanf("%f", &english);
+
+    average = (math + science + english) / 3.0f;
+
+    printf("Average = %.2f\n", average);
+
+    if (average >= 90.0f) {
+        printf("Grade: A\n");
+    } else {
+        if (average >= 75.0f) {
+            printf("Grade: B\n");
+        } else {
+            if (average >= 50.0f) {
+                printf("Grade: C\n");
+            } else {
+                printf("Grade: F\n");
+            }
+        }
+    }
+
+    return 0;
+}
+
+```
 # Output:
+<img width="608" height="236" alt="image" src="https://github.com/user-attachments/assets/bc588419-d236-4297-a5e1-42ab216a483a" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +127,22 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    int number = 15, i;
+
+    for (i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", number, i, number * i);
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="589" height="407" alt="image" src="https://github.com/user-attachments/assets/dc19cb90-ac68-43f8-988a-bb2a7ddb56f7" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +185,34 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    int n, i = 2, f = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    while (i <= n - 1) {
+        if (n % i == 0) {
+            f = 1;
+            break;
+        }
+        i++;
+    }
+
+    if (f == 0)
+        printf("%d is a Prime Number\n", n);
+    else
+        printf("%d is Not a Prime Number\n", n);
+
+    return 0;
+}
+```
 # Output:
+<img width="638" height="157" alt="image" src="https://github.com/user-attachments/assets/a3426d27-c4f8-41b2-8cae-f933440ac215" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +260,34 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main() {
+    int n, i, j;
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+
+        for (j = 1; j <= n; j++) {
+            if (i == 1 || i == n || j == 1 || j == n)
+                printf("%d", i == 1 ? j : (i == n ? n - j + 1 : i));
+            else
+                printf(" ");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
 # Output:
+<img width="517" height="266" alt="image" src="https://github.com/user-attachments/assets/876b5471-d8d8-4340-8bdb-77177c5c25d7" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +340,35 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+# Program:
+```
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    printf("0\n");
+
+    for (i = 7; i >= 1; i--) {
+
+        for (j = i; j <= 7; j++)
+            printf("%d ", j);
+
+        printf("0 ");
+
+        for (j = 7; j >= i; j--)
+            printf("%d ", j);
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+# Output
+<img width="685" height="344" alt="image" src="https://github.com/user-attachments/assets/2004cb8b-7336-491d-9750-ec760e35ffcf" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
